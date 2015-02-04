@@ -9,9 +9,14 @@
 #    CustomLog logs/dummy-host.example.com-access_log common
 </VirtualHost>
 
-and enter following information to hosts file:
+2>. Enter following information to hosts file:
 
 127.0.0.1   www.local-ngt.com
+
+
+3>. Video tutorial for this demo is 
+url: https://www.youtube.com/watch?v=i9MHigUZKEM
+video title: AngularJS Fundamentals In 60-ish Minutes
 
 
 
