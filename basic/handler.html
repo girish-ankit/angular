@@ -1,0 +1,10 @@
+<html ng-app>
+    <head>
+        <script src="../lib/angular.min.js"></script>
+    </head>
+    <body>
+        <button ng-click="count=count+1" ng-init="count=0" ng-hide="count>5">Add Friend</button>
+        <button ng-click="count=count-1"  ng-hide="count<1">Remove Frined</button>
+        count: {{count}}
+    </body>
+</html>

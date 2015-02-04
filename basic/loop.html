@@ -1,0 +1,17 @@
+<html data-ng-app>
+    <head>
+        <script src="../lib/angular.min.js"></script>
+        
+    </head>
+    <body>
+        <ul data-ng-init="friends= [
+            {name:'ramesh', title:'singh'},
+            {name:'shyam', title:'thakur'},
+            {name:'mohan', title:'kumar'}
+            ]">
+            <li data-ng-repeat=" frnd in friends | filter:filterKey | orderBy:'name' ">{{frnd.name}} have surname {{frnd.title}}</li>
+        </ul>
+        Filter Data: <input data-ng-model="filterKey" />
+       
+    </body>
+</html>
