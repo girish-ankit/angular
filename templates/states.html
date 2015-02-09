@@ -1,0 +1,54 @@
+<div class="content-wrapper">
+    <div class="col-sm-12 ">
+        <h1>States List</h1>
+        <div class="input-group" style="margin-bottom:30px;">
+            <span class="input-group-addon" id="basic-addon1">Filter States: </span>
+            <input data-ng-model="filterState"  class="form-control" />{{filterState}}
+        </div>
+
+    </div>
+    <div class="col-sm-12 ">
+        <div class="col-sm-6 ">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Add More States</h3>
+                </div>
+                <div class="panel-body">
+                      <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group" style="margin-bottom: 10px;">
+                            <label for="usr" style="min-width: 36%;">State:</label>
+                            <input type="text" data-ng-model="newState.name" class="form-control" id="state">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pwd" style="min-width: 36%;">Capital:</label>
+                            <input type="text" data-ng-model="newState.capital" class="form-control" id="cap">
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" data-ng-click="addStates()" class="btn btn-default">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-sm-6 ">
+
+            <ul style="padding:0px;">
+                <li class="list-group-item active" data-ng-repeat="state in states | filter:filterState" > <b> {{state.capital | lowercase}} </b>  is capital of  {{state.name |uppercase}} <button class="btn close cardClose" data-ng-click="deleteStates(state.id)">×</button></li>
+            </ul>
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+</div>

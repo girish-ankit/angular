@@ -1,0 +1,55 @@
+<div class="content-wrapper">
+    <div class="col-sm-12 ">
+        <h1>Friends List</h1>
+
+        {{filterKey}}
+        <div class="input-group" style="margin-bottom:30px;">
+            <span class="input-group-addon" id="basic-addon1">Filter Friend: </span>
+            <input data-ng-model="filter.name"  class="form-control" />
+
+        </div>
+    </div>
+    <div class="col-sm-12 ">
+        <div class="col-sm-6 ">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Add More Friends</h3>
+                </div>
+                <div class="panel-body">
+
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group" style="margin-bottom: 10px;">
+                            <label for="usr"  style="min-width: 36%;">Name:</label>
+                            <input type="text" data-ng-model="newFriend.name" class="form-control" id="usr">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pwd" style="min-width: 36%;">Surname:</label>
+                            <input type="text" data-ng-model="newFriend.surname" class="form-control" id="surnm">
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" data-ng-click="addFriend()" class="btn btn-default">Submit</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-6 ">
+
+            <ul style="padding:0px;">
+                <li class="list-group-item btn-danger" data-ng-repeat="frnd in friends | filter:filter.name | orderBy:'name' " > {{frnd.name}} has surname {{frnd.title}}
+                    <button class="btn close cardClose" data-ng-click="deleteFriend(frnd.id)">×</button></li>
+            </ul>
+
+        </div>
+
+
+
+
+    </div>
+
+</div>
