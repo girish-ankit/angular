@@ -1,4 +1,4 @@
-var MyRouterDemo = angular.module('myRouterApp', ['ngRoute']);
+var MyRouterDemo = angular.module('myRouterApp', ['ngRoute', 'ngResource']);
 
 MyRouterDemo.config(function($routeProvider) {
 
